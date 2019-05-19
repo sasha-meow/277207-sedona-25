@@ -23,11 +23,28 @@
       <main class="container">
         <h1 class="visually-hidden">Поиск гостиниц</h1>
         <section class="hotels-filter">
-          <!-- Здесь будет фильтр гостиниц -->
+          <h2 class="visually-hidden">Фильтр выбора жилья</h2>
+            <!-- Здесь будет форма выбора гостиниц -->
+          <p class="price">
+            <span>Стоимость в сутки (Р):</span>
+            <span>от 0</span>
+            <span>до 3000</span>
+            <!-- Здесь будет ползунок -->
+          </p>
+          <button class="result-button">Показать</button>
         </section>
 
         <section class="search-result">
           <h2 class="visually-hidden">Список вариантов гостиниц</h2>
+          <div class="sorting">
+            <p class="sorting-find">Найдено: 3</p>
+            <p class="sorting-type">Сортировка:</p>
+            <ul class="sorting-variants">
+              <li>По цене</li>
+              <li>По типу</li>
+              <li>По рейтингу</li>
+            </ul>
+          </div>
           <ul class="hotels-list">
             <li class="hotels-list-items">
               <h3 class="hotel-name"><a href="#">Amara Resort & Spa</a></h3>
