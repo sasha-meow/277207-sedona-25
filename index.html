@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-    	<meta charset="utf-8">
-    	<title>HTML Academy: Седона</title>
-    	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 	  	<div class="main-container">
@@ -13,7 +14,7 @@
 			  		<a class="main-logo">
 			  			<img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип сайта города Седона">
 			  		</a>  			
-			  		<ul class="navigation">
+			  		<ul class="navigation-list">
 		  				<li class="navigation-item">
 		  					<a href="#">Информация</a>
 		  				</li>
@@ -87,35 +88,36 @@
 
 		  		<section class="hotel-search">
 		  			<h2 class="visually-hidden">Форма поиска гостиниц в Седоне</h2>
-		  			<p class="interest"><b>Заинтересовались?</b> Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-					<button class="button" type="button">Поиск гостиницы в Седоне</button>
-					<form class="search-form" action="#" method="post">
-						<p class="search-item">
-							<label>
-								Дата заезда:
-								<input class="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-							</label>
-						</p>
-						<p class="search-item">
-							<label>
-								Дата выезда:
-								<input class="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-							</label>
-						</p>
-						<p class="search-item">
-							<label>
-								Взрослые:
-								<input class="adults-number" type="number" name="adults-number" placeholder="2">
-							</label>
-						</p>
-						<p class="search-item">
-							<label>
-								Дети:
-								<input class="children-number" type="number" name="children-number" placeholder="0">
-							</label>
-						</p>
-						<button class="button" type="submit">Найти</button>
-					</form>
+		  			<p class="interest"><span>Заинтересовались?</span><br>
+		  			Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+						<button class="button search-button" type="button">Поиск гостиницы в Седоне</button>
+						<form class="search-form" action="#" method="post">
+							<p class="search-item">
+								<label>
+									Дата заезда:
+									<input class="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
+								</label>
+							</p>
+							<p class="search-item">
+								<label>
+									Дата выезда:
+									<input class="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
+								</label>
+							</p>
+							<p class="search-item">
+								<label>
+									Взрослые:
+									<input class="adults-number" type="number" name="adults-number" value="2">
+								</label>
+							</p>
+							<p class="search-item">
+								<label>
+									Дети:
+									<input class="children-number" type="number" name="children-number" value="0">
+								</label>
+							</p>
+							<button class="button find-button" type="submit">Найти</button>
+						</form>
 		  		</section>
 
 				<section class="map">
@@ -127,17 +129,17 @@
 			<footer class="site-footer">
 				<p class="hashteg">#visitSedona</p>
 				<ul class="social-icons">
-					<li class="social-button">
+					<li class="social-button twitter-button">
 						<a href="https://twitter.com/">
 							<span class="visually-hidden">Твиттер</span>
 						</a>
 					</li>
-					<li class="social-button">
+					<li class="social-button facebook-button">
 						<a href="https://www.facebook.com/">
 							<span class="visually-hidden">Фейсбук</span>
 						</a>
 					</li>
-					<li class="social-button">
+					<li class="social-button youtube-button">
 						<a href="https://www.youtube.com/">
 							<span class="visually-hidden">Ютуб</span>
 						</a>
