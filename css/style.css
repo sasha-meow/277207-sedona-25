@@ -1,3 +1,15 @@
+html,
+body {
+	min-width: 1280px;
+	min-height: 2762px;
+}
+
+/*Хотела убрать лишнюю высоту у всей страницы,
+там куча места после футера, но не работает*/
+body.hotel-page {
+	min-height: 933px;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -29,6 +41,18 @@ a {
   overflow: hidden;
 }
 
+.main-container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.container {
+	width: 1180px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
 /*Общий хедер*/
 
 .main-navigation {
@@ -40,6 +64,12 @@ a {
 }
 
 .navigation-list {
+	display: flex;
+	justify-content: space-between;
+	min-height: 56px;
+	padding: 0;
+	margin: 0;
+
 	list-style: none;
 }
 
@@ -61,48 +91,112 @@ a {
 
 /*index.html*/
 
-.introduction .main-picture {
+.introduction {
+	width: 1200px;
+	min-height: 510px;
+
+	background-image: url("../img/background-photo.jpg");
+	background-position: 0 -83px;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-color: #687d8c;
 }
 
-.introduction .description {
+.introduction .photo-title {
+	display: block;
+	margin: 0 auto;
+	padding-top: 75px;
+}
+
+.reasons {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 1312px;
+
+	line-height: 21px;
+}
+
+.reasons .description-wrapper {
+	width: 1200px;
+	min-height: 215px;
+	text-align: center;
+}
+
+.reasons .description {
+	margin: 0;
+	padding: 0;
+	padding-top: 58px;
+
 	color: #000000;
 	font-size: 21px;
-	text-align: center;
+	line-height: 26px;
 
 	background-color: #ffffff;
 }
 
-.introduction .why-better {
+.reasons .why-better {
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+
 	color: #333333;
 	font-weight: 400;
-	text-align: center;
 
 	background-color: #ffffff;	
 }
 
-.reasons {
-	line-height: 21px;
-}
-
 .reasons .reasons-list, 
 .reasons-list .comfort {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
-.reasons .reason-image {
+.reasons-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.reasons-list .reason-image {
+	display: flex;
+	flex-direction: column;
+	width: 1200px;
+	min-height: 256px;
+
 	color: #ffffff;
 
 	background-color: #81b3d2;
 }
 
+.reason-image .reason-flex-wrapper {
+	display: flex;
+}
+
+.reason-flex-wrapper .order-switch {
+	order: -1;
+}
+
+.reason-image img {
+	display: block;
+}
+
 .reasons .reason-no-image {
+	width: 400px;
+	min-height: 256px;
+
 	color: #000000;
 
 	background-color: #eeeeee;
 }
 
+.reason-item p {
+	margin: 0;
+}
+
 .reason-item .reason-title {
+	margin: 0;
+	padding: 0;
 	font-size: 21px;
 	text-align: center;
 }
@@ -113,9 +207,18 @@ a {
 }
 
 .reasons-list .comfort {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 330px;
+
 	color: #000000;
 
 	background-color: #ffffff;
+}
+
+.comfort li {
+	width: 200px;
 }
 
 .comfort h3 {
@@ -128,16 +231,28 @@ a {
 	text-align: center;
 }
 
+.hotel-search {
+	min-height: 290px;
+
+	text-align: center;
+}
+
 .hotel-search .interest {
+	min-height: 95px;
+	margin: 0;
+	padding: 0;
+	padding-top: 50px;
+
 	color: #333333;
 	font-weight: 400;
 	line-height: 24px;
-	text-align: center;
 
 	background-color: #ffffff;	
 }
 
 .interest span {
+	display: block;
+
 	color: #000000;
 	font-size: 30px;
 	font-weight: 700;
@@ -145,12 +260,17 @@ a {
 }
 
 .search-button {
+	display: block;
+	width: 568px;
+	min-height: 86px;
+	margin: 0 auto;
+	margin-top: 47px;
+
 	font: inherit;
 	color: #ffffff;
 	font-size: 21px;
 	line-height: 26px;
 	text-transform: uppercase;
-	text-align: center;
 
 	background-color: #766357;
 	border: none;
@@ -214,21 +334,39 @@ a {
 	background-color: #5496bd;
 }
 
+.map {
+	min-height: 472px;
+	background-color: pink;
+}
+
 /*hotels.html*/
 
 .hotels-filter {
+	min-height: 217px;
+
 	color: #ffffff;
 	line-height: 21px;
 
 	background-color: #657a8a;
 	background-image: url("../img/filter-background.jpg");
+	background-position: 0 -294px;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .hotels-filter ul {
 	list-style: none;
 }
 
+.filter-form {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
 .filter-form fieldset {
+	width: 240px;
+
 	border: none;
 }
 
@@ -258,12 +396,19 @@ a {
 }
 
 .search-result {
+	min-height: 453px;
+
 	color: #000000;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 18px;
 
 	background-color: #ffffff;
+}
+
+.search-result .sorting {
+	display: flex;
+	justify-content: space-around;
 }
 
 .sorting .sorting-find {
@@ -300,30 +445,6 @@ a {
 	color: #81b3d2;	
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .search-result {
 	color: #000000;
 
@@ -332,6 +453,16 @@ a {
 
 .hotels-list {
 	list-style: none;
+}
+
+.hotels-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.hotels-item img {
+	order: -1;
 }
 
 .hotel-name a {
@@ -347,20 +478,23 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.hotels-list-items .hotel-amara {
+.hotels-item .hotel-amara {
 	background-color: #7d3945;
 }
 
-.hotels-list-items .hotel-desert {
+.hotels-item .hotel-desert {
 	background-color: #9e898b;
 }
 
-.hotels-list-items .hotel-villas {
+.hotels-item .hotel-villas {
 	background-color: #73874b;
 }
 
-.hotel-category, 
-.hotel-price {
+.hotel-status {
+	display: flex;
+	flex-direction: column;
+
+
 	font-weight: 400;
 	color: #333333;
 }
@@ -409,17 +543,31 @@ a {
 /*Общий футер*/
 
 .site-footer {
+	display: flex;
+	justify-content: space-around;
 	color: #000000;
 
 	background-color: #ffffff;
 }
 
 .site-footer .hashteg {
+	width: 240px;
+	min-height: 120px;
+	margin: 0;
+	margin-right: 40px;
+	padding-top: 47px;
+
 	font-size: 21px;
 	color: #000000;
+	text-align: center;
 }
 
 .site-footer .social-icons {
+	width: 240px;
+	min-height: 120px;
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 
@@ -431,7 +579,6 @@ a {
 	background-color: #669ec0;
 }
 
-/*Как-то вот здесь не так работает всё*/
 .social-button a:focus {
 	background-color: #5496bd;
 	opacity: 0.3;
@@ -456,9 +603,23 @@ a {
 }
 
 .site-footer .copyright {
+	display: flex;
+	width: 240px;
+	min-height: 120px;
+	margin: 0;
+	padding-top: 40px;
+
+
 	font-weight: 400;
 	color: #000000;
 }
 
-/*Лого нужно было сделать фоновым изображение, чтобы можно было ему 
-поменять цвет при наведении, или есть другой выход? */
+.copyright span {
+	padding-top: 7px;
+	margin-left: 23px;
+}
+
+.copyright .copyright-logo {
+	margin-left: 9px;
+}
+
